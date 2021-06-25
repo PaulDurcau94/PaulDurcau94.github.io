@@ -6,6 +6,7 @@
 	<title>Paul's CV</title>
 	<link rel="stylesheet" href="layout.css">
 	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/bb11bdbc31.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<header>
@@ -19,10 +20,10 @@
 			</div>
 		</div>
 		<ul id="top-menu-bar">
-			<li><a href="#" onclick="showHome()">Home</a></li>
-			<li><a href="#" onclick="showSkills()">Skills</a></li>
-			<li><a href="#" onclick="showProjects()">Projects</a></li>
-			<li><a href="#" onclick="showLanguages()">Languages</a></li>
+			<li><a href="#" onclick="showHome()"><i class="fas fa-home"></i> Home</a></li>
+			<li><a href="#" onclick="showSkills()"><i class="fas fa-file-code"></i> Skills</a></li>
+			<li><a href="#" onclick="showProjects()"><i class="fas fa-project-diagram"></i> Projects</a></li>
+			<li><a href="#" onclick="showLanguages()"><i class="fas fa-language"></i> Languages</a></li>
 	</header>
 
 	<section id="content">
@@ -35,28 +36,38 @@
 				</form>
 			</section>
 			<section>
-				Menu 2
+				<div class="social">
+					<ul>
+						<li><a href="#"><i class="fab fa-2x fa-facebook-square"></i></a></li>
+						<li><a href="#"><i class="fab fa-2x fa-instagram-square"></i></a></li>
+						<li><a href="#"><i class="fab fa-2x fa-github-square"></i></a></li>
+					</ul>
+				</div>
 			</section>
 		</div>
 
 		<div id="main">
 			<div class="page" id="home" style="display: block;">
 				<h3>Home</h3>
-				Bine ai venit...
+				<p>Welcome, my name is Paul and this is my online resume.</p>
 			</div>
 
 			<div class="page" id="skills">
-				<h3>Skills</h3>
+				<h3>Skills</i></h3>
 				<ul>
-					<li>HTML</li>
-					<li>CSS</li>
-					<li>JS</li>
+					<li><i class="fab fa-html5"></i> HTML</li>
+					<li><i class="fab fa-css3-alt"></i> CSS</li>
+					<li><i class="fab fa-js-square"></i> JavaScript</li>
 				</ul>
 			</div>
 
 			<div class="page" id="projects">
 				<h3>Projects</h3>
-				Soon soon soon...
+				<ul>
+					<li>ThaBrain</li>
+					<li>DurTransport</li>
+					<li>CleanTex</li>
+				</ul>
 			</div>
 			
 			<div class="page" id="languages">
@@ -81,7 +92,7 @@
 
 	<footer>
 		<p>
-			<a href="https://fasttrackit.org/">FastTrackIT</a>
+			<a href="https://fasttrackit.org/" target=_blank>FastTrackIT</a>
 			@2021
 		</p>
 	</footer>
