@@ -2,11 +2,15 @@ function hidePage(id) {
     document.getElementById(id).style.display="none";
 }
 
+function showPage(id) {
+    document.getElementById(id).style.display="block";
+}
+
 function showHome() {
     hidePage('skills');
     hidePage('projects');
     hidePage('languages');
-    document.getElementById('home').style.display="block";
+    showPage('home');
 }
 
     
@@ -14,7 +18,7 @@ function showSkills() {
     hidePage('languages');
     hidePage('home');
     hidePage('projects');
-    document.getElementById('skills').style.display="block";
+    showPage('skills');
 }
 
 
@@ -22,12 +26,12 @@ function showProjects() {
     hidePage('skills');
     hidePage('home');
     hidePage('languages');
-    document.getElementById('projects').style.display="block";
+    showPage('projects');
 }
 
 function showLanguages() {
-    document.getElementById('skills').style.display="none";
-    document.getElementById('home').style.display="none";
-    document.getElementById('projects').style.display="none";
-    document.getElementById('languages').style.display="block";
+    hidePage('skills');
+    hidePage('home');
+    hidePage('projects');
+    showPage('languages');
 }
