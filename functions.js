@@ -8,12 +8,12 @@ function showPage(id) {
 }
 
 function hideAllPages() {
-    var pageIds = ['home', 'skills', 'projects', 'languages'];
-    var i = 0;
-   
-    pageIds.forEach(function(pageId, index){
-        hidePage(pageId);
+    var pages = Array.from(document.getElementsByClassName('page'));
+    pages.forEach(function(page){
+        hidePage(page.id);
     });
+
+    var pageIds = ['home', 'skills', 'projects', 'languages'];
 }
 
 function showHome() {
