@@ -6,32 +6,29 @@ function showPage(id) {
     document.getElementById(id).style.display="block";
 }
 
-function showHome() {
+function hideAllPages() {
     hidePage('skills');
     hidePage('projects');
     hidePage('languages');
-    showPage('home');
+    hidePage('home');
 }
 
+function showHome() {
+    hideAllPages();
+    showPage('home');
+}
     
 function showSkills() {
-    hidePage('languages');
-    hidePage('home');
-    hidePage('projects');
+    hideAllPages();
     showPage('skills');
 }
 
-
 function showProjects() {
-    hidePage('skills');
-    hidePage('home');
-    hidePage('languages');
+    hideAllPages();
     showPage('projects');
 }
 
 function showLanguages() {
-    hidePage('skills');
-    hidePage('home');
-    hidePage('projects');
+    hideAllPages();
     showPage('languages');
 }
