@@ -10,15 +10,15 @@ function showPage(id) {
 function hideAllPages() {
     var pageIds = ['home', 'skills', 'projects', 'languages'];
     var i = 0;
-    // hidePage(pageIds[i++]);
-    // hidePage(pageIds[i++]);
-    // hidePage(pageIds[i++]);
-    // hidePage(pageIds[i++]);
 
-    while(i < pageIds.length) {
-        console.info('i = ', i);
-        hidePage(pageIds[i++]);
-    };
+    // while(i < pageIds.length) {
+    //     console.info('i = ', i);
+    //     hidePage(pageIds[i++]);
+    // };
+
+    for(var i = 0; i < pageIds.length; i++ ) {
+        hidePage(pageIds[i]);
+    }
 }
 
 function showHome() {
