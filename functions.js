@@ -1,6 +1,5 @@
 function hidePage(id) {
     document.getElementById(id).style.display="none";
-    console.log
 }
 
 function showPage(id) {
@@ -16,22 +15,9 @@ function hideAllPages() {
     var pageIds = ['home', 'skills', 'projects', 'languages'];
 }
 
-function showHome() {
+function show(id) {
     hideAllPages();
-    showPage('home');
-}
-    
-function showSkills() {
-    hideAllPages();
-    showPage('skills');
+    showPage(id);
 }
 
-function showProjects() {
-    hideAllPages();
-    showPage('projects');
-}
-
-function showLanguages() {
-    hideAllPages();
-    showPage('languages');
-}
+show('skills')
