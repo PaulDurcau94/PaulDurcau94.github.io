@@ -5,6 +5,12 @@ function hide(id) {
 
 function show(id) {
     document.getElementById(id).style.display="block";
+    var oldLink = document.querySelector("a[data-page].active");
+    if (oldLink) {
+        oldLink.classList.remove("active");
+    }
+    var link = document.querySelector(`a[data-page= ${id} ]`);
+    link.classList.add("active");
 }
 
 function hideAllPages() {
