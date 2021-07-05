@@ -1,23 +1,34 @@
-function hidePage(id) {
+
+function hide(id) {
     document.getElementById(id).style.display="none";
 }
 
-function showPage(id) {
+function show(id) {
     document.getElementById(id).style.display="block";
 }
 
 function hideAllPages() {
     var pages = Array.from(document.getElementsByClassName('page'));
     pages.forEach(function(page){
-        hidePage(page.id);
+        hide(page.id);
     });
-
-    var pageIds = ['home', 'skills', 'projects', 'languages'];
 }
 
-function show(id) {
+function highlight(){
+    console.log('To Do!!');
+}
+
+function showPage(id) {
     hideAllPages();
-    showPage(id);
+    show(id);
 }
 
-show('skills')
+show('home')
+
+document.querySelector('#top-menu-bar').addEventListener("click", function(e){
+    if (e.target.matches("a")) {
+        var id = e.target.getAttribute("data-page");
+        showPage(id);
+        highlight(e.target);
+    };
+});
