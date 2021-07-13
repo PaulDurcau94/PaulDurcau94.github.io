@@ -55,6 +55,7 @@ header img {
     padding: 5px 15px 5px 15px;
     margin: 2px 0;
     display: inline-block;
+    border-radius: 5px;
 }
 
 #top-menu-bar a:visited {
@@ -68,6 +69,22 @@ header img {
 }
 
 /* MAIN CONTENT */
+
+#skills li span {
+    font-weight: normal;
+    color: white;
+    font-size: 0.8em;
+    background-color: grey;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 2px 5px;
+    min-width: 20px;
+    text-align: center;
+}   
+    .favorit {
+        color: teal;
+    }
+
 td {
     padding: 5px 10px;
     color: darkblue;
