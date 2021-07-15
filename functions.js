@@ -52,8 +52,6 @@ document.querySelector('#top-menu-bar').addEventListener("click", function(e){
 
 var skills = [];
 
-
-
 function showSkills(skills) {
     var skillsHtml = skills.map(function(skill){
         var favorit = skill.favorit ? 'class="favorit"' : '';
@@ -62,9 +60,29 @@ function showSkills(skills) {
     }).join('');
     document.querySelector("#skills ul").innerHTML = skillsHtml;
 };
+
+function sortSkillsByName(a, b) {
+var aName = a.name.toUpperCase();
+    var bName = b.name.toUpperCase();
+    
+    if (aName < bName) {
+        return -1;
+    };
+
+    if (aName > bName) {
+        return 1;
+    };
+        return 0;
+};
+
+function sortSkillsByEndorsements(a, b) {
+    return b.endorsements - a.endorsements;
+}
+
 fetch("data/skills.json").then(function(response) {
     return response.json();
 }).then(function(skills) {
+    skills.sort(sortSkillsByName);
     window.skills = skills;
     showSkills(skills);
 })
