@@ -59,21 +59,19 @@ function showSkills(skills) {
     document.querySelector("#skills ul").innerHTML = skillsHtml;
 };
 
-function sortSkillsByName(a, b) {
+const sortSkillsByName = (a, b) => {
     const aName = a.name.toUpperCase();
     const bName = b.name.toUpperCase();
-    
     if (aName < bName) {
         return -1;
     };
-
     if (aName > bName) {
         return 1;
     };
         return 0;
 };
 
-function sortSkillsByEndorsements(a, b) {
+const sortSkillsByEndorsements = (a, b) =>  {
     return b.endorsements - a.endorsements;
 }
 
